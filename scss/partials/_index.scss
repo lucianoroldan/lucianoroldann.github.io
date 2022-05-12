@@ -1,0 +1,53 @@
+@import "../variables/variables";
+@import "../sass2/mixins";
+
+
+           /*presentacion*/
+           
+           
+           .presentacion{display: flex; 
+            justify-content: center;
+            background-color:$black;
+            background-image: url("../imagenes/presenta.jpeg");
+            color:$white;
+            text-align: center;
+            align-items: center;
+            section{
+              text-align: center;
+           }
+       
+             }
+        /* aca va el sillon con su/ nosotross*/
+         .nosotros{
+           @include flexbox1;
+           text-align: center;
+           
+          p{
+              @include estiloparalasp;
+             }
+                img{width: 50%;
+              display: inline-flex;}
+         
+            }
+           
+          /*aca arranca la seccion de productos*/
+    .flex-productos{
+      display: flex;
+      overflow: $overflow;
+      margin: 0px 0px;
+      width: 100%;
+      justify-content: center;
+      justify-content: space-around;
+  }
+    .flex-productos img{
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      max-height:300px;
+     
+  }
+.productos h1{
+      text-align: center;
+      background-color:$color1;
+  }
+ 

@@ -1,0 +1,37 @@
+  @import "../variables/variables";
+  @import "../sass2/mixins";
+  
+  /*aca empezamos con el primer grid del index principal*/
+   .conteiner{
+    display: grid;
+    grid-template-columns:repeat(4, 25%) ;
+    grid-template-rows: 100px 600px 800px 400px 600px;
+   grid-template-areas:
+   "nav nav nav nav"
+   "presentacion presentacion presentacion presentacion"
+   "nosotros nosotros nosotros nosotros"
+    "productos productos productos productos"
+    "footer footer footer footer" ;  
+}
+ .nav{display: grid;
+    grid-area: nav;
+    background-color:white;
+   
+}
+  .presentacion{display: grid;
+    grid-area: presentacion;
+   
+}
+  .nosotros{display: grid;
+    grid-area: nosotros;
+    
+}
+.productos{display: grid;
+    grid-area: productos;
+
+}
+ .footer{display: grid;
+    grid-area: footer;
+    background-color:$fondo-de-color;
+}
+

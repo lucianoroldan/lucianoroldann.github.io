@@ -1,0 +1,19 @@
+@mixin flexbox1 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+@mixin estiloparalasp {
+    width:100%;
+    text-align: justify;
+    font-size: 20px;
+    padding: 20px;
+            
+    
+}
+
+
+   
+    

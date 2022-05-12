@@ -1,0 +1,115 @@
+/*presentacion*/
+.presentacion {
+  display: flex;
+  justify-content: center;
+  background-color: #0000;
+  background-image: url("../imagenes/presenta.jpeg");
+  color: white;
+  text-align: center;
+  align-items: center; }
+  .presentacion section {
+    text-align: center; }
+
+/* aca va el sillon con su/ nosotross*/
+.nosotros {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center; }
+  .nosotros p {
+    width: 100%;
+    text-align: justify;
+    font-size: 20px;
+    padding: 20px; }
+  .nosotros img {
+    width: 50%;
+    display: inline-flex; }
+
+/*aca arranca la seccion de productos*/
+.flex-productos {
+  display: flex;
+  overflow: hidden;
+  margin: 0px 0px;
+  width: 100%;
+  justify-content: center;
+  justify-content: space-around; }
+
+.flex-productos img {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: 300px; }
+
+.productos h1 {
+  text-align: center;
+  background-color: #e8b66b; }
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-around; }
+  nav a {
+    text-decoration: none;
+    padding: 50px; }
+
+.logo {
+  display: flex;
+  margin: 0px 0px 0px 00px;
+  max-height: 100px; }
+
+button {
+  font-size: 0.4em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #daaf25;
+  box-shadow: 2px 2px 10px #8b5f0d;
+  color: blanchedalmond;
+  background-color: #e2832b; }
+
+button:hover {
+  background-color: #994e07; }
+
+a {
+  font-style: oblique; }
+
+.footer {
+  display: flex;
+  color: #f7f3e8;
+  padding: 4% 4% 0% 4%;
+  flex-direction: row;
+  align-items: center; }
+
+/*aca empezamos con el primer grid del index principal*/
+.conteiner {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 100px 600px 800px 400px 600px;
+  grid-template-areas: "nav nav nav nav" "presentacion presentacion presentacion presentacion" "nosotros nosotros nosotros nosotros" "productos productos productos productos" "footer footer footer footer"; }
+
+.nav {
+  display: grid;
+  grid-area: nav;
+  background-color: white; }
+
+.presentacion {
+  display: grid;
+  grid-area: presentacion; }
+
+.nosotros {
+  display: grid;
+  grid-area: nosotros; }
+
+.productos {
+  display: grid;
+  grid-area: productos; }
+
+.footer {
+  display: grid;
+  grid-area: footer;
+  background-color: #ff887f; }
+
+* {
+  margin: 0;
+  padding: 0; }

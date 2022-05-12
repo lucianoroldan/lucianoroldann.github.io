@@ -1,0 +1,42 @@
+@import "../variables/variables";
+@import"../sass2/extend";
+
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-around; 
+    a{
+    text-decoration: none;
+    padding: 50px;
+    }
+}
+    .logo{
+         display: flex;
+        margin: 0px 0px 0px 00px;
+        max-height: 100px;
+        }
+
+        button{
+            font-size: 0.4em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: 1px solid rgb(218, 175, 37);
+            box-shadow: 2px 2px 10px rgb(139, 95, 13);
+            color: blanchedalmond;
+            background-color: rgb(226, 131, 43);
+        }
+        button:hover{ background-color: rgb(153, 78, 7);}
+         a{
+            font-style: oblique;
+        }
+
+        .footer{ display: flex;
+            color: #f7f3e8;
+           padding: 4% 4% 0% 4%;
+           
+           flex-direction:row ;
+           align-items: center;
+           
+         }
