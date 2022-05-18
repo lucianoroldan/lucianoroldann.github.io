@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/prueba.css">
+    <script src="https://kit.fontawesome.com/cfcf8a8326.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> 
     <title>muebles home</title>
     <meta name=" keywords" content="muebles-lamparas-sillones-racks- carpinteria- sillas- espacio-relajacion">
     <meta name="description"  content="decoracion- comodidad- confort- venta de muebes- espacio- liberacion- color- tranquilidad">
@@ -12,74 +14,94 @@
 </head>
  <body class="conteiner" >
         <!--menu-->
-        <div class="nav" >
-            <nav>
-               <img class="logo" src="../imagenes/muebles-logo.png" alt="logo">
-               <a href="index.html">home</a>
-               <a href="../pages/racks.html">racks vintage</a>
-               <a href="pag/mesas.html">mesas ratonas</a>
-               <a href="pag/sillones.html">sillones</a>
-               <a href="pag/deco.html">deco</a>
-            </nav>
-       </div>
+        <nav class="nav">
+            <input type="checkbox" id="check">  
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="#" class="enlace">
+                <img src="../imagenes/muebles-logo.png" alt="" class="logo">
+            </a>
+            <ul>
+                <li><a class="active" href="index.html">Inicio</a></li>
+                <li><a href="../pages/linving.html">living</a></li>
+                <li><a href="../pages/comedor.html">comedor</a></li>
+                <li><a href="../pages/dormitorio.html">dormitorio</a></li>
+                <li><a href="../pages/deco.html">deco</a></li>
+            </ul>
+        </nav>
    <!--presentacion-->
         <div class="presentacion"  data-aos="fade-up">
-           <section> 
+           <section class="sectionprincipal"> 
                <a href="../imagenes/sillones.html"><button>ver</button></a>
                <h1>Variedad de muebles  <div>para tu hogar</h1></div>
                
              </section>
        </div>
-   <hr>
-    <!--aca va el sillon con su p-->
-        <div class="nosotros" > 
-            <img  src="../imagenes/sillon.png" alt="muebles-logo">
-          
-            <p> Muebles Home es una empresa con amplia experiencia en diseño,
-                 producción y distribución
-              de muebles laqueados y de melamina de diversos estilos.
-              Tiene más de 65 años de trayectoria en el rubro.
-              Utiliza técnicas tradicionales para lograr el producto requerido y cuenta 
-              con la tecnología adecuada para cumplir distintos requerimientos.
-              Ofrece amplia variedad de muebles 
-           </p>
-        </div>
-        
-   <!--los productos-->
-        <div class="productos">
-         
-         
-           <main class="flex-productos">
-             
-           <div class="produ-2" data-aos="zoom-in-up">
-               <h2>rack vintage</h2>
-               <img src="../imagenes/rack" alt="rack">
-           <a href="pag/racks.html"> <button>ver</button></a>
-           </div>
    
-           <div class="produ-3" data-aos="zoom-in-up">
-               <h2>mesas ratonas</h2>
-               <img src="../imagenes/mesarat4.webp" alt="rack">
-               <a href="pag/mesas.html"><button>ver</button></a>
-           </div>
-           
-            <div class="produ-4" data-aos="zoom-in-up">
-                <h2>sillones</h2>
-               <img src="../imagenes/sillon2.webp" alt="rack">
-          <a href="pag/sillones.html"> <button>ver</button></a>
-           </div>
-            </main>
-         
-       </div>
-   <!--foooter-->
-        <div class="footer">
-           <h4>todos los derechos reservados contactanos</h4>
-           <a href="pag/pagina3.html">click aqui</a>
-           <a target="_blank" href="https://www.instagram.com/lucho_eliasroldan">  instagram </a>
-           <a target="_blank" href="https://www.facebook.com/lucianoeliasroldan">facebook</a>
+<!--productos-->
+  <div class="productos">
+       <section>
        
-           
+        <div class="estilo-a">
+            <a href="#">
+                <h2>living</h2>
+                <div class="imagen-conteiner">
+                    <img src="../tarjetas/living.jpg" alt="rack">
+                   
+                </div>
+            </a>
+        </div>
+        <div class="estilo-a">
+            <a href="#">
+                <h2>comedor</h2>
+                <div class="imagen-conteiner">
+                    <img src="../tarjetas/comedor.jpg" alt="rack">
+                    
+                </div>
+            </a>
+        </div>
+        <div class="estilo-a">
+            <a href="#">
+                <h2>dormitorio</h2>
+                <div class="imagen-conteiner">
+                    <img src="../tarjetas/dormitorio.jpg" alt="rack">
+                   
+                </div>
+            </a>
+        </div>
+    </section>
+</div>
+   
+ <div class="nosotros">
+     <h3>
+        ENVÍOS A TODO EL PAÍS
+        Envíos por Oca a toda Argentina
+        
+        6 CUOTAS SIN INTERÉS
+        ó 10% OFF por Transferencia
+        
+        SHOWROOM MDP
+        Güemes 3154 - 1er Piso Of. 2
+     </h3>
+ </div>
+        
+   <!--foooter-->
+   <section class="footer">
+    <div class="footer-1">
+        <a href="#"><i class="fa-brands fa-facebook-square"></i></a> 
+        <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
        </div>
+       <ul class="list">
+        <li>
+            <a href="#">home </a>
+            <a href="">habiatacion</a>
+            <a href="#"> comedor</a>
+            <a href="#"> sala de estar</a>
+        </li>
+       </ul>
+    </section>
   
 </body>
 </html>

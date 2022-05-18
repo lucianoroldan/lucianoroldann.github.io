@@ -5,12 +5,12 @@
    .conteiner{
     display: grid;
     grid-template-columns:repeat(4, 25%) ;
-    grid-template-rows: 100px 600px 800px 400px 600px;
+    grid-template-rows: 100px 600px 600px 400px 150px;
    grid-template-areas:
    "nav nav nav nav"
    "presentacion presentacion presentacion presentacion"
+   "productos productos productos productos"
    "nosotros nosotros nosotros nosotros"
-    "productos productos productos productos"
     "footer footer footer footer" ;  
 }
  .nav{display: grid;
@@ -22,16 +22,56 @@
     grid-area: presentacion;
    
 }
+.productos{display: grid;
+  grid-area: productos;
+
+}
   .nosotros{display: grid;
     grid-area: nosotros;
     
-}
-.productos{display: grid;
-    grid-area: productos;
-
 }
  .footer{display: grid;
     grid-area: footer;
     background-color:$fondo-de-color;
 }
 
+/*aca empezamos con index2 el grid*/
+.conteiner3{
+  display: grid;
+  grid-template-columns:repeat(4, 25%);
+  grid-template-rows: 200px 500px 400px 150px ;
+  grid-template-areas: 
+  "nav nav nav nav"
+  "productos productos productos productos"
+  "productos productos productos productos"
+  "footer footer footer footer ";
+}
+.nav{
+  display: grid;
+  grid-area: nav;
+}
+.productos1{
+
+  display: grid;
+  grid-area: productos;
+  grid-template-columns:repeat(4, 1fr) ;
+  grid-auto-rows: 350px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+.productos1 img{
+  width: 100%;
+ 
+  object-fit: cover;
+  max-height:300px;
+  border: 1px solid black;
+  
+}
+
+.produ--2 img{
+  display: grid;
+  grid-area: productos2;
+
+  
+
+}

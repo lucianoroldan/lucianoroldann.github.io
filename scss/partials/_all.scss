@@ -1,17 +1,64 @@
 @import "../variables/variables";
 @import"../sass2/extend";
-
-
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+/*aca comenzamos a hacer el menu*/
 nav{
+    background: #ffffff;
+    height: 0px;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    justify-content: space-around; 
+    justify-content: space-around;
+    justify-content: center; 
+   
+    ul{align-items: center;
+        float: right;
+        margin-right: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 10px 15px;
+    }
     a{
-    text-decoration: none;
-    padding: 50px;
+        color: rgb(215, 155, 25);
+        font-size: 13px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        
     }
 }
-    .logo{
+.enlace{
+    position: absolute;
+    padding: 0px 0px;
+}
+li a.active, li a:hover{
+    background: #edd4b3;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: rgb(160, 12, 12);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+ .logo{
          display: flex;
         margin: 0px 0px 0px 00px;
         max-height: 100px;
@@ -32,11 +79,54 @@ nav{
             font-style: oblique;
         }
 
-        .footer{ display: flex;
-            color: #f7f3e8;
-           padding: 4% 4% 0% 4%;
+
+
+
+        .footer{ 
+            text-align: center;
+            align-items: center;
+        
+          .footer-1{
+            text-align: center;
+            padding-bottom: 25px;
+            color: rgb(214, 52, 52);
+        }
+        }
+      .footer-1 a{
+            font-size: 24px;
+            color: inherit;
+            width: 40px;
+            border: 1px solid rgb(235, 99, 99);
+            height: 40px;
+            line-height: 38px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
            
-           flex-direction:row ;
-           align-items: center;
            
-         }
+            
+            
+            
+        
+        }
+        .footer ul{
+            list-style: none;
+            font-size: 20px;
+            line-height: 1.6;
+         
+            text-align: center;
+        
+        }
+        .footer ul a{
+            text-decoration: none;
+            opacity: 0.8;
+            padding: 0 15px;
+            text-align: center;
+        }
+        .footer  li{
+            display: inline-block;
+            
+        
+        
+        }
