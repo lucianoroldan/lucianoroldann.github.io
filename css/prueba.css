@@ -10,19 +10,6 @@
   .presentacion section {
     text-align: center; }
 
-/* 
-         .nosotros{
-           @include flexbox1;
-           text-align: center;
-           
-          p{
-              @include estiloparalasp;
-             }
-                img{width: 50%;
-              display: inline-flex;}
-         
-            }
-           /*aca va la parte de producots */
 section {
   display: flex;
   width: 100%;
@@ -34,7 +21,7 @@ section {
     width: 33%; }
   section .estilo-a a {
     text-decoration: none;
-    color: #d6ac21; }
+    color: #f89807; }
 
 .estilo-a a:hover {
   text-decoration: underline;
@@ -72,7 +59,7 @@ nav {
     line-height: 80px;
     margin: 10px 15px; }
   nav a {
-    color: #d79b19;
+    color: #f89807;
     font-size: 13px;
     padding: 7px 13px;
     border-radius: 3px;
@@ -83,12 +70,12 @@ nav {
   padding: 0px 0px; }
 
 li a.active, li a:hover {
-  background: #edd4b3;
+  background: #f1e4cc;
   transition: .5s; }
 
 .checkbtn {
   font-size: 30px;
-  color: #a00c0c;
+  color: #d67e13;
   float: right;
   line-height: 80px;
   margin-right: 40px;
@@ -100,7 +87,7 @@ li a.active, li a:hover {
 
 .logo {
   display: flex;
-  margin: 0px 0px 0px 00px;
+  margin: 0px 0px 0px 0px;
   max-height: 100px; }
 
 button {
@@ -120,46 +107,46 @@ a {
   font-style: oblique; }
 
 .footer {
+  display: flex;
   text-align: center;
-  align-items: center; }
-  .footer .footer-1 {
-    text-align: center;
-    padding-bottom: 25px;
-    color: #d63434; }
+  align-items: center;
+  justify-content: center; }
 
-.footer-1 a {
-  font-size: 24px;
-  color: inherit;
-  width: 40px;
-  border: 1px solid #eb6363;
-  height: 40px;
-  line-height: 38px;
-  display: inline-block;
+.footer-1 {
   text-align: center;
-  border-radius: 50%;
-  margin: 0 8px; }
+  padding-bottom: 25px;
+  color: #d63434; }
+  .footer-1 a {
+    font-size: 24px;
+    color: inherit;
+    width: 40px;
+    border: 1px solid #eb6363;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px; }
 
 .footer ul {
   list-style: none;
   font-size: 20px;
   line-height: 1.6;
   text-align: center; }
-
-.footer ul a {
-  text-decoration: none;
-  opacity: 0.8;
-  padding: 0 15px;
-  text-align: center; }
-
-.footer li {
-  display: inline-block; }
+  .footer ul a {
+    text-decoration: none;
+    opacity: 0.8;
+    padding: 0 15px;
+    text-align: center; }
+  .footer ul li {
+    display: inline-block; }
 
 /*aca empezamos con el primer grid del index principal*/
 .conteiner {
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 100px 600px 600px 400px 150px;
-  grid-template-areas: "nav nav nav nav" "presentacion presentacion presentacion presentacion" "productos productos productos productos" "nosotros nosotros nosotros nosotros" "footer footer footer footer"; }
+  grid-template-rows: 100px 600px 600px 150px;
+  grid-template-areas: "nav nav nav nav" "presentacion presentacion presentacion presentacion" "productos productos productos productos" "footer footer footer footer"; }
 
 .nav {
   display: grid;
@@ -187,7 +174,7 @@ a {
 .conteiner3 {
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 200px 500px 400px 150px;
+  grid-template-rows: 200px 500px  300px;
   grid-template-areas: "nav nav nav nav" "productos productos productos productos" "productos productos productos productos" "footer footer footer footer "; }
 
 .nav {
@@ -208,6 +195,166 @@ a {
   max-height: 300px;
   border: 1px solid black; }
 
-.produ--2 img {
-  display: grid;
-  grid-area: productos2; }
+/*aqui comenzamos a hacer la vista para tablet*/
+@media screen and (max-width: 928px) {
+  .conteiner {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 600px 600px  300px;
+    grid-template-areas: "nav nav " "presentacion presentacion " "productos productos" "footer footer "; }
+  .nav {
+    display: flex;
+    display: grid; }
+  .nav {
+    display: flex;
+    text-align: center; }
+  .nav a {
+    padding: none;
+    background-color: white;
+    text-align: center; }
+  .nav img {
+    display: none; }
+  /*presentacion*/
+  .presentacion {
+    display: grid; }
+  /*mejoramos la parte de productos "fotos"*/
+  .productos {
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-area: productos; }
+    .productos img {
+      display: flex;
+      max-height: 400px;
+      text-align: center;
+      justify-content: center;
+      object-fit: cover; }
+  /*footer*/
+  .footer {
+    display: grid; }
+  /*aca vamos a hacer el grid del index productos*/
+  .conteiner3 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 600px 600px;
+    grid-template-areas: "nav nav" "productos productos" "footer footer "; }
+  .nav {
+    display: grid;
+    grid-area: nav;
+    background-color: white; }
+  .productos1 {
+    display: grid;
+    display: flex;
+    justify-content: center;
+    grid-area: productos;
+    flex-direction: column;
+    text-align: center;
+    display: grid; }
+  .productos1 img {
+    display: flex;
+    max-height: 400px; } }
+
+/************aca comenzamos con modo celular********************************/
+@media screen and (max-width: 680px) {
+  .conteiner {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: 100px 600px 600px 300px;
+    grid-template-areas: "nav" "presentacion" "productos" "footer"; }
+  nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: grid;
+    background-color: #f89807; }
+  .nav {
+    display: flex;
+    text-align: center; }
+    .nav a {
+      padding: none;
+      background-color: white;
+      text-align: center; }
+    .nav img {
+      display: none; }
+  /*presentacion*/
+  .presentacion {
+    display: grid;
+    align-items: center;
+    text-align: center; }
+  /*mejoramos la parte de productos "fotos"*/
+  .productos {
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-area: productos;
+    width: 100%; }
+  .-productos {
+    display: flex;
+    display: grid;
+    justify-content: center;
+    width: 100%; }
+  .productos img {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    border: none;
+    justify-content: center; }
+  /*footer*/
+  .footer {
+    display: grid;
+    text-align: center; }
+  /*aca vamos a hacer el grid del index productos*/
+  .conteiner3 {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: 100px 90% 300px;
+    grid-template-areas: "nav" "productos" "footer "; }
+  .nav {
+    display: grid;
+    grid-area: nav;
+    background-color: white; }
+  .productos1 {
+    display: grid;
+    display: flex;
+    justify-content: center;
+    grid-area: productos; }
+  .productos1 img {
+    display: flex;
+    max-height: 400px;
+    text-align: center; }
+  .footer {
+    display: grid;
+    grid-area: footer; } }
+
+/* aca tenemos el media del menu*/
+@media (max-width: 952px) {
+  .enlace {
+    padding-left: 20px; }
+  nav ul li a {
+    font-size: 16px; } }
+
+@media (max-width: 600px) {
+  .checkbtn {
+    display: block; }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f89807;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s; }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px; }
+  nav ul li a {
+    font-size: 20px; }
+  li a:hover, li a.active {
+    background: none;
+    color: red; }
+  #check:checked ~ ul {
+    left: 0; }
+  .enlace {
+    display: none; } }

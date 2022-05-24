@@ -17,19 +17,7 @@
            }
        
              }
-        /* 
-         .nosotros{
-           @include flexbox1;
-           text-align: center;
-           
-          p{
-              @include estiloparalasp;
-             }
-                img{width: 50%;
-              display: inline-flex;}
-         
-            }
-           /*aca va la parte de producots */
+       
             section{ 
               
                display: flex;
@@ -44,16 +32,12 @@
             .estilo-a a{
               
               text-decoration: none;
-              color: rgb(214, 172, 33);
-            
-          }
-           }
-         
-         
-          
+              color:$color1;
+              }
+           }   
           .estilo-a a:hover{
               text-decoration: underline;
-              color: rgb(214, 126, 19);
+              color: $color2;
               
           }
          

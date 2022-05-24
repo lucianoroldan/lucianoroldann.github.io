@@ -1,8 +1,4 @@
 
-
-
-
-
 /*aqui comenzamos a hacer la vista para tablet*/
     
 @media screen and (max-width:928px){
@@ -10,11 +6,10 @@
     .conteiner{
         display: grid;
         grid-template-columns:repeat(2, 50%) ;
-        grid-template-rows: 100px 600px 600px 50% 600px;
+        grid-template-rows: 100px 600px 600px  300px;
        grid-template-areas:
        "nav nav "
        "presentacion presentacion "
-      
        "productos productos"
        "footer footer " ;  
     }
@@ -27,7 +22,7 @@
 }
 .nav a{
     padding: none;
-    background-color: rgb(254, 254, 254);
+    background-color: $white;
     text-align: center;
 }
 .nav img{
@@ -38,50 +33,23 @@
     display: grid;
 }
 
-/*aca va el sillon con su p*/
 
-.nosotros{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-    align-items: center;
-   }
-   .nosotros p{
-    width: 100%;
-    text-align: justify;
-    font-size: 20px;
-    padding: 20px;
-   }
-.nosotros img{
-    width: 50%;
-    display: inline-flex;
-}
   /*mejoramos la parte de productos "fotos"*/
 
 .productos{ display: flex;
     justify-content: center;
     display: grid;
     grid-area: productos;
-   
-   
-}
-.flex-productos{  display: flex;
-    display: grid;
-   justify-content: center;
-  }
- .flex-productos img{
+   img{
     display: flex;
     max-height: 400px;
     text-align: center;
     justify-content: center;
     object-fit: cover;
-}
-.productos h1{
-    text-align: center;
-}
+    }
+   }
+ 
+
 /*footer*/
 .footer{
     display: grid;
@@ -99,7 +67,7 @@
 }
  .nav{display: grid;
     grid-area: nav;
-    background-color:white;
+    background-color:$white;
    
 }
   .productos1{display: grid;
@@ -113,25 +81,18 @@
 .productos1 img{
     display: flex;
     max-height: 400px;
-  
- 
+  }
 }
-
-}
-
-
-
 
    /************aca comenzamos con modo celular********************************/
    @media screen and (max-width:680px){
     .conteiner{
             display: grid;
             grid-template-columns:repeat(1, 100%);
-            grid-template-rows: 600px 600px 600px 50% 600px;
+            grid-template-rows: 100px 600px 600px 300px;
            grid-template-areas:
            "nav"
            "presentacion"
-           "nosotros"
            "productos"
            "footer";  
         }
@@ -140,44 +101,27 @@
         flex-direction: column;
         text-align: center;
         display: grid;
-        background-color:  rgb(231, 150, 44);}
+        background-color:$color1}
         .nav{
         display: flex;
-        text-align: center;   
-    }
-    .nav a{
-        padding: none;
-        background-color: rgb(254, 254, 254);
-        text-align: center;
-    }
-    .nav img{
-        display: none;
-    }
-    
+        text-align: center; 
+        a{
+            padding: none;
+            background-color: $white;
+            text-align: center;  }
+            img{
+                display: none;
+            }
+         }
+   
+   
     /*presentacion*/
     .presentacion{
         display: grid;
         align-items: center;
         text-align: center;
-       }
-     /*aca va el sillon con su p*/
-    
-    .nosotros{
-        width: 100%;
-        display: flex;
-         justify-content: center;
-        text-align: center;
-        background-color: rgb(232, 179, 114);
-        align-items: center;
-       }
-     .nosotros p{
-        width: 100%;
-        text-align: center;
-        font-size: 20px;
-        padding: 20px;
-       }
-    .nosotros img{display: none;
-    }
+       }  
+       
      /*mejoramos la parte de productos "fotos"*/
     
     .productos{ display: flex;
@@ -186,12 +130,12 @@
         grid-area: productos;
         width: 100%;
         ; }
-    .flex-productos{  display: flex;
+    .-productos{  display: flex;
         display: grid;
        justify-content: center; 
        width:100%;
     }
-     .flex-productos img{
+     .productos img{
         display: flex;
         text-align: center;
         width: 100%;
@@ -199,9 +143,7 @@
         border: none ;
         justify-content: center; 
     }
-    .productos h1{
-        text-align: center;
-    }
+ 
     /*footer*/
     .footer{
         display: grid;
@@ -211,16 +153,16 @@
      .conteiner3{
         display: grid;
         grid-template-columns:repeat(1, 100%) ;
-        grid-template-rows: 600px 90% 600px ;
+        grid-template-rows: 100px 90% 300px ;
        grid-template-areas:
-       "nav "
-       "productos "
-       "footer  " ;  
+       "nav"
+       "productos"
+       "footer " ;  
     }
     
     .nav{display: grid;
         grid-area: nav;
-        background-color:white;
+        background-color:$white;
        
     }
     
@@ -234,7 +176,52 @@
         max-height: 400px;
         text-align: center
     }
-   
-    
-    
+    .footer{
+        display: grid;
+        grid-area: footer;
+    }
     } 
+
+    /* aca tenemos el media del menu*/
+    @media (max-width: 952px){
+        .enlace{
+            padding-left: 20px;
+        }
+        nav ul li a{
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width: 600px){
+        .checkbtn{
+            display: block;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh; 
+            background: $color1;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+        }
+        nav ul li{
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+        }
+        nav ul li a{
+            font-size: 20px;
+        }
+        li a:hover, li a.active{
+            background: none;
+            color:$color3;
+        } 
+        #check:checked ~ ul{
+            left:0;
+        }
+     .enlace{
+         display: none;
+     }
+    }
