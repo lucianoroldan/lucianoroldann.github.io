@@ -1,0 +1,25 @@
+.conteiner2{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 100px 600px 150px;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "producto producto producto producto"
+    "footer footer footer footer";
+
+}
+.nav{
+    display: grid;
+    grid-area: nav;
+}
+  
+.sproduct{
+    display: grid;
+    grid-area: producto;
+    
+}
+
+.footer{
+    display: grid;
+    grid-area: footer;
+}

@@ -252,7 +252,24 @@ a {
     display: grid; }
   .productos1 img {
     display: flex;
-    max-height: 400px; } }
+    max-height: 400px; }
+  /*conteiner2 paginas con descipciones de articulos*/
+  .conteiner2 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 200px 150px;
+    grid-template-areas: "nav nav " "producto producto " "footer footer "; }
+  .nav {
+    display: grid;
+    grid-area: nav; }
+  .sproduct {
+    display: flex;
+    display: grid;
+    grid-area: producto;
+    flex-direction: column; }
+  .footer {
+    display: grid;
+    grid-area: footer; } }
 
 /************aca comenzamos con modo celular********************************/
 @media screen and (max-width: 680px) {
@@ -333,6 +350,7 @@ a {
   nav ul li a {
     font-size: 16px; } }
 
+/*aca tenemos el media del nav*/
 @media (max-width: 600px) {
   .checkbtn {
     display: block; }
@@ -358,3 +376,52 @@ a {
     left: 0; }
   .enlace {
     display: none; } }
+
+.sproduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .sproduct .productos {
+    display: flex;
+    flex-direction: row; }
+  .sproduct .sproduct2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    flex-flow: column; }
+    .sproduct .sproduct2 span {
+      margin-bottom: 1em; }
+    .sproduct .sproduct2 .titulo {
+      font-size: 1.5em; }
+    .sproduct .sproduct2 .stock {
+      color: #e3b732;
+      border: 1px solid #e7bb40;
+      background-color: black;
+      font-size: 1.2em; }
+    .sproduct .sproduct2 .precio {
+      font-size: 1.5em; }
+  .sproduct .imagen-descript img {
+    max-width: 70%;
+    border-radius: 20px;
+    border: 1px solid red; }
+
+.conteiner2 {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 100px 600px 150px;
+  grid-template-areas: "nav nav nav nav" "producto producto producto producto" "footer footer footer footer"; }
+
+.nav {
+  display: grid;
+  grid-area: nav; }
+
+.sproduct {
+  display: grid;
+  grid-area: producto; }
+
+.footer {
+  display: grid;
+  grid-area: footer; }

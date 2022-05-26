@@ -82,6 +82,34 @@
     display: flex;
     max-height: 400px;
   }
+
+/*conteiner2 paginas con descipciones de articulos*/
+.conteiner2{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100px 200px 150px;
+    grid-template-areas: 
+    "nav nav "
+    "producto producto "
+    "footer footer ";
+
+}
+.nav{
+    display: grid;
+    grid-area: nav;
+}
+  
+.sproduct{ display: flex;
+    display: grid;
+    grid-area: producto;
+    flex-direction: column;
+    
+}
+
+.footer{
+    display: grid;
+    grid-area: footer;
+}
 }
 
    /************aca comenzamos con modo celular********************************/
@@ -191,7 +219,7 @@
             font-size: 16px;
         }
     }
-    
+    /*aca tenemos el media del nav*/
     @media (max-width: 600px){
         .checkbtn{
             display: block;
