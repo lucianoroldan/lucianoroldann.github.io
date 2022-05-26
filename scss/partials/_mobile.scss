@@ -32,8 +32,6 @@
 .presentacion{
     display: grid;
 }
-
-
   /*mejoramos la parte de productos "fotos"*/
 
 .productos{ display: flex;
@@ -48,13 +46,10 @@
     object-fit: cover;
     }
    }
- 
-
 /*footer*/
 .footer{
     display: grid;
-}
-   
+} 
 /*aca vamos a hacer el grid del index productos*/
  .conteiner3{
     display: grid;
@@ -67,14 +62,13 @@
 }
  .nav{display: grid;
     grid-area: nav;
-    background-color:$white;
-   
+    background-color:$white; 
 }
   .productos1{display: grid;
     display: flex;
-   justify-content: center;
+    justify-content: center;
     grid-area: productos;
-     flex-direction: column;
+    flex-direction: column;
     text-align: center;
     display: grid;
 }
@@ -98,14 +92,11 @@
     display: grid;
     grid-area: nav;
 }
-  
 .sproduct{ display: flex;
     display: grid;
     grid-area: producto;
     flex-direction: column;
-    
 }
-
 .footer{
     display: grid;
     grid-area: footer;
