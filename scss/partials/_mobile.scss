@@ -85,6 +85,7 @@
     grid-template-areas: 
     "nav nav "
     "producto producto "
+    "descripcion descripcion"
     "footer footer ";
 
 }
@@ -97,10 +98,43 @@
     grid-area: producto;
     flex-direction: column;
 }
+.descripcion2{
+    display: grid;
+    grid-area: descripcion;
+}
 .footer{
     display: grid;
     grid-area: footer;
 }
+/*quienes somos*/
+.conteiner4{
+    display: grid;
+    grid-template-columns:repeat(2, 50%);
+    grid-template-rows: 200px 500px 150px ;
+    grid-template-areas: 
+    "nav nav "
+     "quienessomos quienessomos "
+    "footer footer  ";
+  }
+  .nav{
+    display: grid;
+    grid-area: nav;
+  }
+  .quienessomos{
+  
+    display: grid;
+    grid-area: quienessomos;
+   display: flex;
+   flex-direction: row;
+   
+    padding: 20px;
+    grid-gap: 10px;
+    font-size: 20px;
+  .footer{
+    display: grid;
+    grid-area: footer;
+  }
+  }
 }
 
    /************aca comenzamos con modo celular********************************/
@@ -201,6 +235,65 @@
     }
     } 
 
+    /*conteiner2 paginas con descipciones de articulos*/
+.conteiner2{
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: 100px 200px 150px;
+    grid-template-areas: 
+    "nav nav "
+    "producto "
+    "none"
+    "footer  ";
+
+}
+.nav{
+    display: grid;
+    grid-area: nav;
+}
+.sproduct{ display: flex;
+    display: grid;
+    grid-area: producto;
+    flex-direction: column;
+}
+.descripcion2{
+    display:grid;
+    grid-area: productos;
+    
+}
+.footer{
+    display: grid;
+    grid-area: footer;}
+    /*quienes somos*/
+.conteiner4{
+    display: grid;
+    grid-template-columns:repeat(2, 50%);
+    grid-template-rows: 200px 500px 150px ;
+    grid-template-areas: 
+    "nav nav "
+     "quienessomos quienessomos "
+    "footer footer  ";
+  }
+  .nav{
+    display: grid;
+    grid-area: nav;
+  }
+  .quienessomos{
+  
+    display: grid;
+    grid-area: quienessomos;
+   display: flex;
+   flex-direction: row;
+   
+    padding: 20px;
+    grid-gap: 10px;
+    font-size: 20px;
+  .footer{
+    display: grid;
+    grid-area: footer;
+  }
+  }
+
     /* aca tenemos el media del menu*/
     @media (max-width: 952px){
         .enlace{
@@ -244,3 +337,89 @@
          display: none;
      }
     }
+
+
+      /************aca comenzamos con modo celular********************************/
+   @media screen and (max-width:400px){
+        /*quienes somos*/
+.conteiner4{
+    display: grid;
+    grid-template-columns:repeat(2, 50%);
+    grid-template-rows: 200px 1600px 150px ;
+    grid-template-areas: 
+    "nav nav "
+     "quienessomos quienessomos "
+    "footer footer  ";
+  }
+  .nav{
+    display: grid;
+    grid-area: nav;
+  }
+  .quienessomos{
+  
+    display: grid;
+    grid-area: quienessomos;
+   display: flex;
+   flex-direction: row;
+   
+    padding: 20px;
+    grid-gap: 10px;
+    font-size: 20px;
+  .footer{
+    display: grid;
+    grid-area: footer;
+  }
+  }
+   /*conteiner2 paginas con descipciones de articulos*/
+.conteiner2{
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    grid-template-rows: 100px 400px  900px 150px;
+    grid-template-areas: 
+    "nav "
+    "producto "
+    "descripcion"
+    "footer  ";
+
+}
+.nav{
+    display: grid;
+    grid-area: nav;
+}
+.sproduct{ 
+    display: grid;
+    grid-area: producto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.productos{
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+.imagen-descript{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    object-fit: contain;
+   
+   
+    
+}
+.sproduct2{
+   margin: 10px;
+}
+.descripcion2{
+    display:grid;
+    grid-area: descripcion;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.footer{
+    display: grid;
+    grid-area: footer;}
+  
+   }

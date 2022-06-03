@@ -23,7 +23,6 @@
 }
 .productos{display: grid;
   grid-area: productos;
-
 }
   .nosotros{display: grid;
     grid-area: nosotros;
@@ -66,3 +65,35 @@
   
 }
 
+
+
+
+.conteiner4{
+  display: grid;
+  grid-template-columns:repeat(4, 25%);
+  grid-template-rows: 200px 400px 150px ;
+  grid-template-areas: 
+  "nav nav nav nav"
+   "quienessomos quienessomos quienessomos quienessomos"
+  "footer footer footer footer ";
+}
+.nav{
+  display: grid;
+  grid-area: nav;
+}
+.quienessomos{
+
+  display: grid;
+  grid-area: quienessomos;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+  padding: 20px;
+  grid-gap: 10px;
+  font-size: 20px;
+ font-family: 'Times New Roman', Times, serif; 
+.footer{
+  display: grid;
+  grid-area: footer;
+}
+}

@@ -1,10 +1,11 @@
 .conteiner2{
     display: grid;
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: 100px 600px 150px;
+    grid-template-rows: 100px 600px 400px 150px;
     grid-template-areas: 
     "nav nav nav nav"
     "producto producto producto producto"
+    "descripcion descripcion none none"
     "footer footer footer footer";
 
 }
@@ -17,6 +18,12 @@
     display: grid;
     grid-area: producto;
     
+}
+.descripcion2{ 
+    display: grid;
+    grid-area: descripcion;
+    
+   
 }
 
 .footer{
